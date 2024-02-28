@@ -1,0 +1,17 @@
+name: Test exiting on failure
+
+on: pull_request
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Try to fail
+      run: exit 1
+    - name: Print message if we don't fail
+      run: echo Should not get here
