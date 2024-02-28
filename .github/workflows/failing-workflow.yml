@@ -1,4 +1,4 @@
-name: Test exiting on failure
+name: test-failure
 
 on: pull_request
 
