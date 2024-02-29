@@ -11,12 +11,12 @@ jobs:
     if: github.actor == 'dependabot[bot]' || github.actor == 'CFN-CI'
     steps:
       - name: Approve a PR
-        run: gh pr review --approve "$PR_URL"
+        run: github.actor = 'CFN-CI' && gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Enable auto-merge for Dependabot PRs
-        run: gh pr merge --admin --rebase "$PR_URL"
+        run: gh pr merge --auto --rebase "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
