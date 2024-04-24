@@ -1,6 +1,6 @@
 # pcap-release
 
-[BOSH](https://bosh.io/) release of the pcap [Cloud Foundry](https://www.cloudfoundry.org/) add-on.
+[BOSH](https://bosh.io/) release of the pcap [Cloud Foundry](https://www.cloudfoundry.org/) add-on
 
 ## Disclaimer
 
