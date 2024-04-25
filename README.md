@@ -19,7 +19,7 @@ For tcpdumps of CF app containers, pcap-release provides a plugin to the CF Clou
 
 ### CF App Capture
 
-* `pcap-api` is deployed on its own VM.
+* `pcap-api` is deployed on its own VM
 * `pcap-agent` is co-located on app-containers.
 * `pcap-api` needs to register its route via route-registrar, part of the cf-routing-release.
 * `cf-CLI` pcap-plugin (TBD/WIP) is used to send capture requests to the `pcap-api`
